@@ -126,21 +126,69 @@
 
 /* Level Eight- The Defense of Consolas */
 
-Console.Title = "The Defense of Consolas";
-Console.Beep(440, 500);
-Console.BackgroundColor = ConsoleColor.Magenta;
+//Console.Title = "The Defense of Consolas";
+//Console.Beep(440, 500);
+//Console.BackgroundColor = ConsoleColor.Magenta;
 
-Console.Write("Target Row: ");
-var getRow = Console.ReadLine();
-int targetRow = Convert.ToInt32(getRow);
+//Console.Write("Target Row: ");
+//var getRow = Console.ReadLine();
+//int targetRow = Convert.ToInt32(getRow);
 
-Console.Write("Target Column: ");
-var getColumn = Console.ReadLine();
-int targetColumn = Convert.ToInt32(getColumn);
+//Console.Write("Target Column: ");
+//var getColumn = Console.ReadLine();
+//int targetColumn = Convert.ToInt32(getColumn);
 
-var soldierA = targetRow + "," + (targetColumn - 1);
-var soldierB = (targetRow + 1) + "," + targetColumn;
-var soldierC = targetRow + "," + (targetColumn + 1);
-var soldierD = (targetRow - 1) + "," + targetColumn;
+//var soldierA = targetRow + "," + (targetColumn - 1);
+//var soldierB = (targetRow + 1) + "," + targetColumn;
+//var soldierC = targetRow + "," + (targetColumn + 1);
+//var soldierD = (targetRow - 1) + "," + targetColumn;
 
-Console.WriteLine($"Deploy to:\n({soldierA})\n({soldierB})\n({soldierC})\n({soldierD})");
+//Console.WriteLine($"Deploy to:\n({soldierA})\n({soldierB})\n({soldierC})\n({soldierD})");
+
+/* Level Nine - Repairing the Clocktower */
+
+//Console.Write("Enter the hour: ");
+//var getTime = Console.ReadLine();
+//int curentTime = Convert.ToInt32(getTime);
+
+//if (curentTime % 2 == 0)
+//    Console.WriteLine("tick");
+//else if (curentTime % 2 == 1)
+//    Console.WriteLine("tock");
+//else
+//    Console.WriteLine("Please try again");
+// I could be using better error handling here to make sure a number was entered rather than a letter or another character. 
+
+/* Watchtower NOT YET FINISHED*/
+
+Console.Write("Provide enemies x coordinate: ");
+var getXcoord = Console.ReadLine();
+Console.Write("Provide enemies y coordinate: ");
+var getycoord = Console.ReadLine();
+Console.WriteLine("Enemies Location: " + "(" + getXcoord + ", " + getycoord + ")");
+
+int xCoord = Convert.ToInt32(getXcoord);
+int yCoord = Convert.ToInt32(getycoord);
+
+if (xCoord <= 3 && yCoord <= 3)
+    if (xCoord > 0 && yCoord == 2)
+        Console.WriteLine("East");
+    else if (xCoord > 0 && yCoord > 0)
+        Console.WriteLine("NE");
+    else if (xCoord > 0 && yCoord < 0)
+        Console.WriteLine("SE");
+    else if (xCoord < 0 && yCoord == 1)
+        Console.WriteLine("West");
+    else if (xCoord < 0 && yCoord > 0)
+        Console.WriteLine("NW");
+    else if (xCoord < 0 && yCoord < 0)
+        Console.WriteLine("SW");
+    else if (yCoord < 0)
+        Console.WriteLine("South");
+    else if (yCoord > 0)
+        Console.WriteLine("North");
+    else if (xCoord == 0 && yCoord == 0)
+        Console.WriteLine("Center");
+else
+    Console.WriteLine("Please try again.");
+// I could be using better error handling here to make sure a number was entered rather than a letter or another character. 
