@@ -159,33 +159,78 @@
 //    Console.WriteLine("Please try again");
 // I could be using better error handling here to make sure a number was entered rather than a letter or another character. 
 
-/* Watchtower NOT YET FINISHED*/
+/* Watchtower */
 
-Console.Write("Provide enemies x coordinate: ");
-var getXcoord = Console.ReadLine();
-Console.Write("Provide enemies y coordinate: ");
-var getycoord = Console.ReadLine();
-Console.WriteLine("Enemies Location: " + "(" + getXcoord + ", " + getycoord + ")");
+//Console.Write("Provide enemies x coordinate: ");
+//var getXcoord = Console.ReadLine();
+//Console.Write("Provide enemies y coordinate: ");
+//var getycoord = Console.ReadLine();
+//Console.WriteLine("Enemies Location: " + "(" + getXcoord + ", " + getycoord + ")");
 
-int xCoord = Convert.ToInt32(getXcoord);
-int yCoord = Convert.ToInt32(getycoord);
+//int xCoord = Convert.ToInt32(getXcoord);
+//int yCoord = Convert.ToInt32(getycoord);
 
 
-if (xCoord > 0 && yCoord == 0)
-    Console.WriteLine("East");
-else if (xCoord > 0 && yCoord > 0)
-    Console.WriteLine("NE");
-else if (xCoord > 0 && yCoord < 0)
-    Console.WriteLine("SE");
-else if (xCoord < 0 && yCoord == 0)
-    Console.WriteLine("West");
-else if (xCoord < 0 && yCoord > 0)
-Console.WriteLine("NW");
-else if (xCoord < 0 && yCoord < 0)
-    Console.WriteLine("SW");
-else if (x == 0 && yCoord < 0)
-    Console.WriteLine("South");
-else if (xCoord == 0 && yCoord > 0)
-Console.WriteLine("North");
-else if (xCoord == 0 && yCoord == 0)
-    Console.WriteLine("Center");
+//if (xCoord > 0 && yCoord == 0)
+//    Console.WriteLine("East");
+//else if (xCoord > 0 && yCoord > 0)
+//    Console.WriteLine("NE");
+//else if (xCoord > 0 && yCoord < 0)
+//    Console.WriteLine("SE");
+//else if (xCoord < 0 && yCoord == 0)
+//    Console.WriteLine("West");
+//else if (xCoord < 0 && yCoord > 0)
+//Console.WriteLine("NW");
+//else if (xCoord < 0 && yCoord < 0)
+//    Console.WriteLine("SW");
+//else if (x == 0 && yCoord < 0)
+//    Console.WriteLine("South");
+//else if (xCoord == 0 && yCoord > 0)
+//Console.WriteLine("North");
+//else if (xCoord == 0 && yCoord == 0)
+//    Console.WriteLine("Center");
+
+/* Level Ten - Buying Inventory */
+
+Console.WriteLine("The following items are available:");
+Console.WriteLine("1 - Rope");
+Console.WriteLine("2 - Torches");
+Console.WriteLine("3 - Climbing Equipment");
+Console.WriteLine("4 - Clean Water");
+Console.WriteLine("5 - Machete");
+Console.WriteLine("6 - Canoe");
+Console.WriteLine("7 - Food Supplies");
+Console.WriteLine("What number do you want to see the price of? ");
+
+int choice = Convert.ToInt32(Console.ReadLine());
+
+switch (choice)
+{
+    case 1:
+        Console.WriteLine("Rope = 10 gold pieces");
+        break;
+    case 2:
+        Console.WriteLine("Torches = 15 gold pieces");
+        break;
+    case 3:
+        Console.WriteLine("Climbing Equipment = 25 gold pieces");
+        break;
+    case 4:
+        Console.WriteLine("Clean Water = 1 gold piece");
+        break;
+    case 5:
+        Console.WriteLine("Machete = 20 gold pieces");
+        break;
+    case 6:
+        Console.WriteLine("Canoe = 200 gold pieces");
+        break;
+    case 7:
+        Console.WriteLine("Food Supplies = 1 gold piece");
+        break;
+    default:
+        Console.WriteLine("Please try again");
+        break;
+}
+
+//var itemNum = Console.ReadLine();
+//Console.WriteLine(itemNum);
