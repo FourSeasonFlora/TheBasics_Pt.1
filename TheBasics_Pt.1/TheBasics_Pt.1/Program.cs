@@ -170,25 +170,22 @@ Console.WriteLine("Enemies Location: " + "(" + getXcoord + ", " + getycoord + ")
 int xCoord = Convert.ToInt32(getXcoord);
 int yCoord = Convert.ToInt32(getycoord);
 
-if (xCoord <= 3 && yCoord <= 3)
-    if (xCoord > 0 && yCoord == 2)
-        Console.WriteLine("East");
-    else if (xCoord > 0 && yCoord > 0)
-        Console.WriteLine("NE");
-    else if (xCoord > 0 && yCoord < 0)
-        Console.WriteLine("SE");
-    else if (xCoord < 0 && yCoord == 1)
-        Console.WriteLine("West");
-    else if (xCoord < 0 && yCoord > 0)
-        Console.WriteLine("NW");
-    else if (xCoord < 0 && yCoord < 0)
-        Console.WriteLine("SW");
-    else if (yCoord < 0)
-        Console.WriteLine("South");
-    else if (yCoord > 0)
-        Console.WriteLine("North");
-    else if (xCoord == 0 && yCoord == 0)
-        Console.WriteLine("Center");
-else
-    Console.WriteLine("Please try again.");
-// I could be using better error handling here to make sure a number was entered rather than a letter or another character. 
+
+if (xCoord > 0 && yCoord == 0)
+    Console.WriteLine("East");
+else if (xCoord > 0 && yCoord > 0)
+    Console.WriteLine("NE");
+else if (xCoord > 0 && yCoord < 0)
+    Console.WriteLine("SE");
+else if (xCoord < 0 && yCoord == 0)
+    Console.WriteLine("West");
+else if (xCoord < 0 && yCoord > 0)
+Console.WriteLine("NW");
+else if (xCoord < 0 && yCoord < 0)
+    Console.WriteLine("SW");
+else if (x == 0 && yCoord < 0)
+    Console.WriteLine("South");
+else if (xCoord == 0 && yCoord > 0)
+Console.WriteLine("North");
+else if (xCoord == 0 && yCoord == 0)
+    Console.WriteLine("Center");
