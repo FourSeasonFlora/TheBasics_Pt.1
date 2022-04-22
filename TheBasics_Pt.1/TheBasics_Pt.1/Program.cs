@@ -192,6 +192,10 @@
 
 /* Level Ten - Buying Inventory */
 
+Console.WriteLine("Please provide your name: ");
+var usersName = Console.ReadLine();
+Console.WriteLine($"Hello {usersName}");
+
 Console.WriteLine("The following items are available:");
 Console.WriteLine("1 - Rope");
 Console.WriteLine("2 - Torches");
@@ -203,34 +207,81 @@ Console.WriteLine("7 - Food Supplies");
 Console.WriteLine("What number do you want to see the price of? ");
 
 int choice = Convert.ToInt32(Console.ReadLine());
+var maker = "Lauren";
+//int rope = 10;
+//float torche = 15;
+//float climbing = 25;
+//float water = 1;
+//int machete = 20;
+//int canoe = 200;
+//float food = 1;
 
-switch (choice)
+//switch (choice)
+//{
+//    case 1:
+//        Console.WriteLine($"Rope = {rope} gold pieces");
+//        if (usersName == maker)
+//            Console.WriteLine("You received a 50% discount! Your cost will be " + rope / 2 + " gold");
+//        break;
+//    case 2:
+//        Console.WriteLine($"Torches = {torche} gold pieces");
+//        if (usersName == maker)
+//            Console.WriteLine("You received a 50% discount! Your cost will be " + torche / 2 + " gold");
+//        break;
+//    case 3:
+//        Console.WriteLine($"Climbing Equipment = {climbing} gold pieces");
+//        if (usersName == maker)
+//            Console.WriteLine("You received a 50% discount! Your cost will be " + climbing / 2 + " gold");
+//        break;
+//    case 4:
+//        Console.WriteLine($"Clean Water = {water} gold piece");
+//        if (usersName == maker)
+//            Console.WriteLine("You received a 50% discount! Your cost will be " + water / 2 + " gold");
+//        break;
+//    case 5:
+//        Console.WriteLine($"Machete = {machete} gold pieces");
+//        if (usersName == maker)
+//            Console.WriteLine("You received a 50% discount! Your cost will be " + machete / 2 + " gold");
+//        break;
+//    case 6:
+//        Console.WriteLine($"Canoe = {canoe} gold pieces");
+//        if (usersName == maker)
+//            Console.WriteLine("You received a 50% discount! Your cost will be " + canoe / 2 + " gold");
+//        break;
+//    case 7:
+//        Console.WriteLine($"Food Supplies = {food} gold piece");
+//        if (usersName == maker)
+//            Console.WriteLine("You received a 50% discount! Your cost will be " + food / 2 + " gold");
+//        break;
+//    default:
+//        Console.WriteLine("Please try again");
+//        break;
+//}
+/*Level 10 Discounted Inventory - Authors Solution*/
+
+string whichItem = choice switch
 {
-    case 1:
-        Console.WriteLine("Rope = 10 gold pieces");
-        break;
-    case 2:
-        Console.WriteLine("Torches = 15 gold pieces");
-        break;
-    case 3:
-        Console.WriteLine("Climbing Equipment = 25 gold pieces");
-        break;
-    case 4:
-        Console.WriteLine("Clean Water = 1 gold piece");
-        break;
-    case 5:
-        Console.WriteLine("Machete = 20 gold pieces");
-        break;
-    case 6:
-        Console.WriteLine("Canoe = 200 gold pieces");
-        break;
-    case 7:
-        Console.WriteLine("Food Supplies = 1 gold piece");
-        break;
-    default:
-        Console.WriteLine("Please try again");
-        break;
-}
+    1 => "Rope",
+    2 => "Torches",
+    3 => "Climbing Equipment",
+    4 => "Clean Water",
+    5 => "Machete",
+    6 => "Canoe",
+    7 => "Food Supplies",
+    _ => "Please try again"
+};
 
-//var itemNum = Console.ReadLine();
-//Console.WriteLine(itemNum);
+float price = whichItem switch
+{
+    "Rope" => 10,
+    "Torches" => 15,
+    "Climbing Equipment" => 25,
+    "Clean Water" => 1,
+    "Machete" => 20,
+    "Canoe" => 200,
+    "Food Supplies" => 1,
+    _ => 0
+};
+
+if (usersName == maker) price /= 2;
+Console.WriteLine($"{whichItem} costs {price} gold");
