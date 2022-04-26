@@ -192,22 +192,22 @@
 
 /* Level Ten - Buying Inventory */
 
-Console.WriteLine("Please provide your name: ");
-var usersName = Console.ReadLine();
-Console.WriteLine($"Hello {usersName}");
+//Console.WriteLine("Please provide your name: ");
+//var usersName = Console.ReadLine();
+//Console.WriteLine($"Hello {usersName}");
 
-Console.WriteLine("The following items are available:");
-Console.WriteLine("1 - Rope");
-Console.WriteLine("2 - Torches");
-Console.WriteLine("3 - Climbing Equipment");
-Console.WriteLine("4 - Clean Water");
-Console.WriteLine("5 - Machete");
-Console.WriteLine("6 - Canoe");
-Console.WriteLine("7 - Food Supplies");
-Console.WriteLine("What number do you want to see the price of? ");
+//Console.WriteLine("The following items are available:");
+//Console.WriteLine("1 - Rope");
+//Console.WriteLine("2 - Torches");
+//Console.WriteLine("3 - Climbing Equipment");
+//Console.WriteLine("4 - Clean Water");
+//Console.WriteLine("5 - Machete");
+//Console.WriteLine("6 - Canoe");
+//Console.WriteLine("7 - Food Supplies");
+//Console.WriteLine("What number do you want to see the price of? ");
 
-int choice = Convert.ToInt32(Console.ReadLine());
-var maker = "Lauren";
+//int choice = Convert.ToInt32(Console.ReadLine());
+//var maker = "Lauren";
 //int rope = 10;
 //float torche = 15;
 //float climbing = 25;
@@ -259,29 +259,68 @@ var maker = "Lauren";
 //}
 /*Level 10 Discounted Inventory - Authors Solution*/
 
-string whichItem = choice switch
-{
-    1 => "Rope",
-    2 => "Torches",
-    3 => "Climbing Equipment",
-    4 => "Clean Water",
-    5 => "Machete",
-    6 => "Canoe",
-    7 => "Food Supplies",
-    _ => "Please try again"
-};
+//string whichItem = choice switch
+//{
+//    1 => "Rope",
+//    2 => "Torches",
+//    3 => "Climbing Equipment",
+//    4 => "Clean Water",
+//    5 => "Machete",
+//    6 => "Canoe",
+//    7 => "Food Supplies",
+//    _ => "Please try again"
+//};
 
-float price = whichItem switch
-{
-    "Rope" => 10,
-    "Torches" => 15,
-    "Climbing Equipment" => 25,
-    "Clean Water" => 1,
-    "Machete" => 20,
-    "Canoe" => 200,
-    "Food Supplies" => 1,
-    _ => 0
-};
+//float price = whichItem switch
+//{
+//    "Rope" => 10,
+//    "Torches" => 15,
+//    "Climbing Equipment" => 25,
+//    "Clean Water" => 1,
+//    "Machete" => 20,
+//    "Canoe" => 200,
+//    "Food Supplies" => 1,
+//    _ => 0
+//};
 
-if (usersName == maker) price /= 2;
-Console.WriteLine($"{whichItem} costs {price} gold");
+//if (usersName == maker) price /= 2;
+//Console.WriteLine($"{whichItem} costs {price} gold");
+
+/* Level 11 */
+
+int pilot;
+
+do
+{
+    Console.Write("Pilot please provide number: ");
+    var pilotNum = Console.ReadLine();
+    pilot = Convert.ToInt32(pilotNum);
+    if (pilot < 1)
+        Console.WriteLine($"{pilot} is too low.");
+    else if (pilot > 100)
+        Console.WriteLine($"{pilot} is too high.");
+    else
+        Console.WriteLine($"{pilot} has been recorded.");
+}
+while (pilot < 1 || pilot > 100);
+Console.Clear();
+
+
+int hunter;
+
+do
+{
+    Console.Write("Hunter please provide number: ");
+    var hunterNum = Console.ReadLine();
+    hunter = Convert.ToInt32(hunterNum);
+    if (hunter < 1)
+        Console.WriteLine($"{hunter} is too low.");
+    else if (hunter > 100)
+        Console.WriteLine($"{hunter} is too high.");
+    else
+        Console.WriteLine($"{hunter} has been recorded.");
+}
+while (hunter < 1 | hunter > 100);
+Console.Clear();
+
+Console.WriteLine($"Coordinates Provided: {pilot}, {hunter}");
