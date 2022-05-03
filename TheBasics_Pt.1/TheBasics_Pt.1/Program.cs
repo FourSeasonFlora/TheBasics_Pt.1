@@ -286,41 +286,62 @@
 //if (usersName == maker) price /= 2;
 //Console.WriteLine($"{whichItem} costs {price} gold");
 
-/* Level 11 */
+/* Level 11 - The Prototype */
 
-int pilot;
+//int pilot;
 
-do
+//do
+//{
+//    Console.Write("Pilot please provide number: ");
+//    var pilotNum = Console.ReadLine();
+//    pilot = Convert.ToInt32(pilotNum);
+//    if (pilot < 1)
+//        Console.WriteLine($"{pilot} is too low.");
+//    else if (pilot > 100)
+//        Console.WriteLine($"{pilot} is too high.");
+//    else
+//        Console.WriteLine($"{pilot} has been recorded.");
+//}
+//while (pilot < 1 || pilot > 100);
+//Console.Clear();
+
+
+//int hunter;
+
+//do
+//{
+//    Console.Write("Hunter please provide number: ");
+//    var hunterNum = Console.ReadLine();
+//    hunter = Convert.ToInt32(hunterNum);
+//    if (hunter < 1)
+//        Console.WriteLine($"{hunter} is too low.");
+//    else if (hunter > 100)
+//        Console.WriteLine($"{hunter} is too high.");
+//    else
+//        Console.WriteLine($"{hunter} has been recorded.");
+//}
+//while (hunter < 1 | hunter > 100);
+//Console.Clear();
+
+//Console.WriteLine($"Coordinates Provided: {pilot}, {hunter}");
+
+/* Level 11 - The Magic Cannon */
+
+for (int num = 1; num < 101; num ++)
 {
-    Console.Write("Pilot please provide number: ");
-    var pilotNum = Console.ReadLine();
-    pilot = Convert.ToInt32(pilotNum);
-    if (pilot < 1)
-        Console.WriteLine($"{pilot} is too low.");
-    else if (pilot > 100)
-        Console.WriteLine($"{pilot} is too high.");
-    else
-        Console.WriteLine($"{pilot} has been recorded.");
+    if (num % 3 == 0 && num % 5 == 0)
+    {
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine($"{num}: Mega Blast");
+    }
+    else if (num % 5 == 0)
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"{num}: Electric");
+    }
+    else if (num % 3 == 0)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"{num}:Fire");
+    }
 }
-while (pilot < 1 || pilot > 100);
-Console.Clear();
-
-
-int hunter;
-
-do
-{
-    Console.Write("Hunter please provide number: ");
-    var hunterNum = Console.ReadLine();
-    hunter = Convert.ToInt32(hunterNum);
-    if (hunter < 1)
-        Console.WriteLine($"{hunter} is too low.");
-    else if (hunter > 100)
-        Console.WriteLine($"{hunter} is too high.");
-    else
-        Console.WriteLine($"{hunter} has been recorded.");
-}
-while (hunter < 1 | hunter > 100);
-Console.Clear();
-
-Console.WriteLine($"Coordinates Provided: {pilot}, {hunter}");
