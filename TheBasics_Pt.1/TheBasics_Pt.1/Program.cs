@@ -327,21 +327,21 @@
 
 /* Level 11 - The Magic Cannon */
 
-for (int num = 1; num < 101; num ++)
-{
-    if (num % 3 == 0 && num % 5 == 0)
-    {
-        Console.ForegroundColor = ConsoleColor.Blue;
-        Console.WriteLine($"{num}: Mega Blast");
-    }
-    else if (num % 5 == 0)
-    {
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine($"{num}: Electric");
-    }
-    else if (num % 3 == 0)
-    {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine($"{num}:Fire");
-    }
-}
+//for (int num = 1; num < 101; num ++)
+//{
+//    if (num % 3 == 0 && num % 5 == 0)
+//    {
+//        Console.ForegroundColor = ConsoleColor.Blue;
+//        Console.WriteLine($"{num}: Mega Blast");
+//    }
+//    else if (num % 5 == 0)
+//    {
+//        Console.ForegroundColor = ConsoleColor.Yellow;
+//        Console.WriteLine($"{num}: Electric");
+//    }
+//    else if (num % 3 == 0)
+//    {
+//        Console.ForegroundColor = ConsoleColor.Red;
+//        Console.WriteLine($"{num}:Fire");
+//    }
+//}
